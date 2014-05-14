@@ -26,7 +26,11 @@ The following files need to be configured on the Salt Master:
     - /etc/salt/cloud
     - /etc/salt/cloud.providers.d/*
 
-The master much be set up to point the reactor to the necessary Salt Cloud
+
+/etc/salt/master
+~~~~~~~~~~~~~~~~
+
+The master must be set up to point the reactor to the necessary Salt Cloud
 provider setting. Any additional settings to be used on the target minion, that
 are not configured in the provider configuration, can also be set here.
 

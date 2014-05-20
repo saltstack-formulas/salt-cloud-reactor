@@ -49,8 +49,8 @@ based on the contents of it. The following two options need to be set:
 
 .. code-block:: yaml
 
-    update_cachedir
-    diff_cache_events
+    update_cachedir: True
+    diff_cache_events: True
 
 This will cause Salt Cloud to fire events to Salt when changes are detected on
 the configured provider.

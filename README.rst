@@ -35,6 +35,7 @@ provider setting. Any additional settings to be used on the target minion, that
 are not configured in the provider configuration, can also be set here.
 
 .. code-block:: yaml
+
     reactor:
       - 'salt/cloud/*/cache_node_new':
         - '/srv/reactor/autoscale.sls'
@@ -44,7 +45,7 @@ are not configured in the provider configuration, can also be set here.
         - '/srv/reactor/autoscale.sls'
 
     autoscale:
-      provider: my-provider-config
+      provider: my-ec-config
       ssh_username: root
 
 

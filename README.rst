@@ -35,10 +35,17 @@ provider setting. Any additional settings to be used on the target minion, that
 are not configured in the provider configuration, can also be set here.
 
 .. code-block:: yaml
+    reactor:
+      - 'salt/cloud/*/cache_node_new':
+        - '/srv/reactor/autoscale.sls'
+      - 'salt/cloud/*/cache_node_diff':
+        - '/srv/reactor/autoscale.sls'
+      - 'salt/cloud/*/cache_node_missing':
+        - '/srv/reactor/autoscale.sls'
 
-    ec2.autoscale:
-      provider: my-ec2-config
-      ssh_username: ec2-user
+    autoscale:
+      provider: my-provider-config
+      ssh_username: root
 
 
 /etc/salt/cloud

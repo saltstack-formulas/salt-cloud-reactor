@@ -36,9 +36,17 @@ are not configured in the provider configuration, can also be set here.
 
 .. code-block:: yaml
 
-    ec2.autoscale:
-      provider: my-ec2-config
-      ssh_username: ec2-user
+    reactor:
+      - 'salt/cloud/*/cache_node_new':
+        - '/srv/reactor/autoscale.sls'
+      - 'salt/cloud/*/cache_node_diff':
+        - '/srv/reactor/autoscale.sls'
+      - 'salt/cloud/*/cache_node_missing':
+        - '/srv/reactor/autoscale.sls'
+
+    autoscale:
+      provider: my-ec-config
+      ssh_username: root
 
 
 /etc/salt/cloud

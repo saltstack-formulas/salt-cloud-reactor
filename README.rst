@@ -39,8 +39,6 @@ are not configured in the provider configuration, can also be set here.
     reactor:
       - 'salt/cloud/*/cache_node_new':
         - '/srv/reactor/autoscale.sls'
-      - 'salt/cloud/*/cache_node_diff':
-        - '/srv/reactor/autoscale.sls'
       - 'salt/cloud/*/cache_node_missing':
         - '/srv/reactor/autoscale.sls'
 
@@ -93,6 +91,8 @@ to already be created by the time it hits the reactor.
       minion:
         master: saltmaster.example.com
 
+:Note: The openstack cloud provider is currently broken and autoscaling will not work with it until
+  `this bug <https://github.com/saltstack/salt/issues/20932#issuecomment-76043607>`_ is fixed.
 
 Basic Usage
 -----------

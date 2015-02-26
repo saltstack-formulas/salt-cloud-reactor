@@ -39,8 +39,6 @@ are not configured in the provider configuration, can also be set here.
     reactor:
       - 'salt/cloud/*/cache_node_new':
         - '/srv/reactor/autoscale.sls'
-      - 'salt/cloud/*/cache_node_diff':
-        - '/srv/reactor/autoscale.sls'
       - 'salt/cloud/*/cache_node_missing':
         - '/srv/reactor/autoscale.sls'
 

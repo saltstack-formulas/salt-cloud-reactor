@@ -9,12 +9,12 @@ def run():
 
         vm_opts = __opts__.get('autoscale', {})
         vm_['provider'] = vm_opts['provider']
-        for key, value in vm_opts.iteritems():
+        for key, value in vm_opts.items():
             vm_[key] = value
         vm_['instances'] = data['new_data']['name']
         vm_['instance_id'] = data['new_data']['id']
         vm_list = []
-        for key, value in vm_.iteritems():
+        for key, value in vm_.items():
             if not key.startswith('__') and key != 'state':
                 vm_list.append({key: value})
 
